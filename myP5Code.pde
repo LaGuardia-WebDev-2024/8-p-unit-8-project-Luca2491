@@ -1,28 +1,62 @@
 //🟢setup Function - will run once
 setup = function() {
-    size(600, 400);
+    size(1500, 800);
     background(255,255,255,0);
     
-    drawFish(200, 200, color(200,0,200)); 
-    drawFish(300, 200, color(0,200,200));
+    
+   
+    
 };
 
 //🟢draw Function - will run on repeat
 draw = function(){
 
+drawPencil(mouseX, mouseY); 
+Folder();//
+
+
+
+var label = mouseX + "," + mouseY;
+textSize(150);
+
+
 };
+
+var Folder = function(){//
+var texX = random(-200,1000);
+var texY = random(-200,1000);
+var Folder = "📁"
+
+fill(100,100,100);
+textSize(25);
+text(Folder, texX, texY)
+};//
+
 
 //🟢mouseClicked Function - will run when mouse is clicked
 mouseClicked = function(){
 
-}
+Sky();
 
-//🟡drawFish Function - will run when called
-var drawFish = function(fishX, fishY, fishColor){
-  textSize(80);
-  fill(fishColor);
-  text("𓆝", fishX, fishY);
 };
+var Sky = function(){
+var textX = random(-200,1000);
+var textY = random(-200,1000);
+var Sky = "🙂"
+
+fill(100,100,100);
+textSize(50);
+text(Sky, textX, textY)
+
+};
+
+//🟡drawPencil Function - will run when called
+var drawPencil = function(PencilX, PencilY, PencilColor){
+  textSize(150);
+  fill(PencilColor);
+  text("🃏", PencilX, PencilY);
+};
+
 
 
 
